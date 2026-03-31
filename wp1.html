@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Professional Experience</title>
+<style>
+  
+/* Base reset */
+  body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    margin: 40px 0 30px 0;
+  }
+
+  .header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+
+  .header h1 {
+    font-size: 20px;
+    margin: 0 0 4px 0;
+  }
+
+  .header .role {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 6px;
+  }
+
+  .header .contact a {
+    font-size: 12px;
+    color: #1a7fcc;
+    text-decoration: none;
+    margin: 0 5px;
+  }
+
+
+    .contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 6px;
+    }
+
+    .contact-icons img {
+    width: 20px;
+    height: 20px;
+    opacity: 0.7;
+    }
+
+    .contact-icons a:hover img {
+    opacity: 1;
+    }
+
+  /* CV container */
+  .cv-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Section title */
+  .section-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 0px;
+  }
+
+  .section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: #1a7fcc;
+    margin: 0px auto 0 auto;
+    border-radius: 1px;
+  }
+
+  /* Row (Professional Experience / Project / Education) */
+  .row {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    /* border-bottom: 1px solid #ddd; */
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+
+  .row:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  /* Left column */
+  .left-column {
+    width: 580px;
+    flex-shrink: 0;
+    font-size: 9px;
+    display: flex;
+    flex-direction: column;
+     margin-left: 100px;
+  }
+
+  .left-column h2 {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .left-column .role {
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 6px;
+  }
+
+  .left-column ul {
+    list-style: disc inside;
+    margin: 2px 0 0 0;
+    padding-left: 0;
+  }
+
+  .left-column li {
+    margin: 2px 0;
+  }
+
+  /* Right column */
+  .right-column {
+    flex: 1;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+
+    gap: 10px;
+  }
+
+  .right-column video,
+  .right-column img {
+    width: 80%;
+    border-radius: 6px;
+  }
+
+  /* Text-only right column */
+  .text-right .right-column {
+    max-width: 100%;
+  }
+
+  .text-right .right-column p,
+  .text-right .right-column li {
+    font-size: 11px;
+    margin-bottom: 5px;
+  }
+
+  /* Skills tags */
+  .skills span {
+    display: inline-block;
+    background: #1a7fcc;
+    color: #fff;
+    padding: 2px 6px;
+    margin: 2px;
+    border-radius: 8px;
+    font-size: 10px;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column;
+      align-items: center;
+    }
+    .left-column {
+      width: 100%;
+      text-align: center;
+      align-items: center;
+    }
+    .right-column {
+      max-width: 60%;
+    }
+  }
+
+</style>
+</head>
+
+<body>
+  <div class="header">
+    <h1>Professional Experience</h1>
+
+  </div>
+
+<div class="cv-container">
+
+
+
+  <!-- Position 1 -->
+  <div class="row">
+    <div class="left-column">
+      <h2>Research Associate (Postdoc)</h2>
+      <p class="role">King’s College London (KCL), School of Biomedical Engineering (Apr 2024 – Aug 2025)</p>
+        <p class="project"><strong>Vision-based semi-automated therapy delivery in eye surgery (NIHR funded):</strong></p>
+              <ul>  <strong>Project 1:</strong> Segmentation of surgical tools in microscope images from real vitreoretinal surgeries:  <a href="https://github.com/HarrisKomn/distil_segm/tree/main">[Code]</a>
+                  <li>Developed lightweight deep learning multiclass segmentation models using knowledge distillation from SAM2.</li>
+                  <li>Trained segmentation architectures (SegFormer, DeepLabV3+, U-Net) with encoders (MiT-B0, MiT-B2, ResNet-18, ResNet-32)</li>
+                  <li>Implemented hard/soft distillation (CE, Dice, Focal) and feature distillation (MSE, cosine distance, attention maps)</li>
+                  <li>Improved mIoU by 12.68% with near real-time inference (18 FPS), suitable for surgical interventions. </li>
+                  <li>Deployed segmentation models at Moorfields Eye Hospital on NVIDIA Clara AGX device and ZEISS surgical microscope. <a href="https://github.com/HarrisKomn/deploy_segm"> [Code]</a></li> 
+
+            </ul>
+            <br>
+              <ul> <strong>Project 2:</strong> Segmentation of surgical tools in microscope images of MOCK surgeries for robotic control: <a href="https://github.com/HarrisKomn/vr_tool_tracking">[Code]</a>
+                  <li>Developed deep learning multiclass segmentation models for surgical tools, robust under different light conditions. (Vid.1, Vid.2)</li>  
+                  <li>Implemented deep learning dense and sparce tracking algorithms for tracking points of interest in microscope (Leica) images.</li>
+                  <li>Integrated tracking outputs with robotic eye surgery system to enable real-time visual servoing. (Vid.3)</li>
+                  <li>Optimized model inference speed using JAX and NVIDIA TensorRT (kernel fusion, quantization).</li>
+                  <li>Prepared and presented technical progress reports to funding committee.</li>
+              </ul>
+
+            <p  class="project"><strong>Project leads:</strong> Prof. Christos Bergeles, Prof. Sebastien Ourselin</p>
+            <p style="margin: 0" class="project"><strong>Location:</strong> Moorfields Eye Hospital, SIE labs at St Thomas' Hospital, London, UK</p>
+    </div>
+    <div class="right-column">
+        <figure style="float: left; margin: 10px 0px 0px 0; text-align: center;">
+          <img src="media/distil_sam2.PNG" style="height:130px; width:250px;" alt="Tool segmentation demo">
+          <figcaption style="font-size: 9px; color: #555;">Fig.1: Diagram showing distillation setup.</figcaption>
+        </figure> 
+        <figure style="float: left; margin: 10px 0px 0px 0; text-align: center;">
+          <img src="media/mult_seg_tr_mtib0.gif" style="height:130px; width:250px;" alt="Tool segmentation demo">
+          <figcaption style="font-size: 9px; color: #555;">Vid.1: Tool segmentation+tracking (left). Point tracking(right).</figcaption>
+        </figure>          
+      
+      </div>
+      
+  </div>
+  <div style="display: flex; gap: 20px;">
+
+   <figure style="float: left; margin: 0px 0px 0px 0; text-align: center;margin-top: 20px; margin-left: 220px;">
+          <img src="media/bin_tool_seg.gif" style="height:130px; width:250px;" alt="Tool segmentation demo">
+          <figcaption style="font-size: 9px; color: #555;">Vid.2: Tool segmentation + tracking.</figcaption>
+        </figure>
+      <figure style="float: left; margin: 0px 0px 0px 0; text-align: center;margin-top: 20px;">
+          <img src="media/vis_serv.gif" style="height:130px; width:250px;" alt="Tool segmentation demo">
+          <figcaption style="font-size: 9px; color: #555;">Vid.3: Robot moves automatically to the desired position.</figcaption>
+        </figure>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Professional Experience</title>
+<style>
+  
+/* Base reset */
+  body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    margin: 40px 0 30px 0;
+  }
+
+  .header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+
+  .header h1 {
+    font-size: 20px;
+    margin: 0 0 4px 0;
+  }
+
+  .header .role {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 6px;
+  }
+
+  .header .contact a {
+    font-size: 12px;
+    color: #1a7fcc;
+    text-decoration: none;
+    margin: 0 5px;
+  }
+
+
+    .contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 6px;
+    }
+
+    .contact-icons img {
+    width: 20px;
+    height: 20px;
+    opacity: 0.7;
+    }
+
+    .contact-icons a:hover img {
+    opacity: 1;
+    }
+
+  /* CV container */
+  .cv-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Section title */
+  .section-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 0px;
+  }
+
+  .section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: #1a7fcc;
+    margin: 0px auto 0 auto;
+    border-radius: 1px;
+  }
+
+  /* Row (Professional Experience / Project / Education) */
+  .row {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    /* border-bottom: 1px solid #ddd; */
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+
+  .row:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  /* Left column */
+  .left-column {
+    width: 580px;
+    flex-shrink: 0;
+    font-size: 9px;
+    display: flex;
+    flex-direction: column;
+     margin-left: 100px;
+  }
+
+  .left-column h2 {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .left-column .role {
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 6px;
+  }
+
+  .left-column ul {
+    list-style: disc inside;
+    margin: 2px 0 0 0;
+    padding-left: 0;
+  }
+
+  .left-column li {
+    margin: 2px 0;
+  }
+
+  /* Right column */
+  .right-column {
+    flex: 1;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+
+    gap: 10px;
+  }
+
+  .right-column video,
+  .right-column img {
+    width: 80%;
+    border-radius: 6px;
+  }
+
+  /* Text-only right column */
+  .text-right .right-column {
+    max-width: 100%;
+  }
+
+  .text-right .right-column p,
+  .text-right .right-column li {
+    font-size: 11px;
+    margin-bottom: 5px;
+  }
+
+  /* Skills tags */
+  .skills span {
+    display: inline-block;
+    background: #1a7fcc;
+    color: #fff;
+    padding: 2px 6px;
+    margin: 2px;
+    border-radius: 8px;
+    font-size: 10px;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column;
+      align-items: center;
+    }
+    .left-column {
+      width: 100%;
+      text-align: center;
+      align-items: center;
+    }
+    .right-column {
+      max-width: 60%;
+    }
+  }
+
+</style>
+</head>
+
+<body>
+  <div class="header">
+    <h1>Professional Experience</h1>
+
+  </div>
+
+<div class="cv-container">
+
+
+
+  <!-- Position 1 -->
+  <div class="row">
+    <div class="left-column">
+      <h2>Research Assistant</h2>
+        <p class="role">Sensor Coating Systems & Queen Mary University of London (Jun 2023 – Nov 2024)</p> 
+        <p class="project"><strong>Deep learning visual SLAM for robot localization in aerospace environment (NATEP funded):</strong> <a href="https://github.com/HarrisKomn/rob_local">[Code]</a></p>
+            <ul>
+              <li>Developed an end-to-end deep learning Visual SLAM pipeline for monocular camera-based robot localization.</li>
+              <li>Used single camera of 1.05mm diameter, calibrated with checkerboard (estimation of intrinsic parameters).</li>
+              <li>Aligned the reconstructed 3D point cloud with the CAD model to resolve scale ambiguity in monocular setting.</li>
+              <li>Validated system's localization against an Aurora Electromagnetic Tracking sensor and 3D CAD points of interest.</li>
+              <li>Achieved 2 mm localization accuracy in a mock environment, under limited lighting and texture conditions.</li>
+              <li>Prepared and presented technical progress reports to funding committee.</li>
+
+          </ul>
+
+            <p  class="project"><strong>Project leads:</strong> Dr. Jörg Feist, Prof. Kaspar Althoefer, Prof. Christos Bergeles</p>
+            <p style="margin: 0" class="project"><strong>Location: </strong>  Sensor Coating Systems, London, UK</p>
+    </div>
+    <div class="right-column">
+        <figure style="float: left; margin: 10px 0px 0px 0; text-align: center;">
+          <img src="media/rob_local (1).gif" style="height:130px; width:250px;" alt="Tool segmentation demo">
+          <figcaption style="font-size: 9px; color: #555;">Vid.1: Robot trajectory(red), reconstructed blade(point cloud).</figcaption>
+        </figure> 
+        <figure style="float: left; margin: 10px 0px 0px 0; text-align: center;">
+          <img src="media/rob_local_2 (1).gif" style="height:130px; width:250px;" alt="Tool segmentation demo">
+          <figcaption style="font-size: 9px; color: #555;">Vid.2: Robot trajectory(red), reconstructed blade(point cloud).</figcaption>
+        </figure>          
+      
+      </div>
+      
+  </div>
+
+
+</body>
+</html>

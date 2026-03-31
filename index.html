@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harris Komninos</title>
+<style>
+  /* Base reset */
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f8fb;
+    color: #333;
+  }
+
+  .skills-block {
+    margin-bottom: 0px;
+    margin-top: -10px;
+    font-size: 10px;
+
+  }
+
+  .skills-block p {
+    margin: 4px 0;
+    max-width: 550px;
+    margin-left: 80px;
+    margin-top: 2px;
+    margin-bottom: -0px;
+
+  }
+
+  .skill-group {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 10px;
+  }
+  
+  .skill-group + p {
+      margin-bottom: 8px; /* space between title and next skill row */
+      margin-top: 0px;
+  }
+
+  .skills-block span {
+    
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 2px 6px;
+    border-radius: 8px;
+    font-size: 8px;
+    margin: 2px;
+    margin-bottom: 0px;
+
+  
+  }
+
+
+
+  .content {
+    max-width: 20px;
+  } 
+
+
+
+  /* Header */
+  .header {
+    text-align: center;
+    margin: 40px 0 -20px 0;
+  }
+
+  .header img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    transform: scale(1.0);  /* 👈 rotate slightly */
+  }
+
+  .header h1 {
+    font-size: 20px;
+    margin: 0 0 4px 0;
+  }
+
+  .header .role {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 6px;
+  }
+
+  .header .contact a {
+    font-size: 12px;
+    color: #1a7fcc;
+    text-decoration: none;
+    margin: 0 5px;
+  }
+
+
+    .contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 6px;
+    }
+
+    .contact-icons img {
+    width: 20px;
+    height: 20px;
+    opacity: 0.7;
+    }
+
+    .contact-icons a:hover img {
+    opacity: 1;
+    }
+
+  /* CV container */
+  .cv-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Section title */
+  .section-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 0px;
+  }
+
+  .section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 0px;
+    background-color: #0f1113;
+    margin: 0px auto 0 auto;
+    border-radius: 1px;
+
+  }
+
+  hr {
+    border: none;                 /* remove default line */
+    border-top: 1px solid #2a222c; /* line color & thickness */
+    width: 800px;                 /* desired line length */
+    margin: 10px auto;            /* center it horizontally */
+
+  }
+
+  /* Row (Professional Experience / Project / Education) */
+  .row {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    /* border-bottom: 1px solid #ddd; */
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    
+    text-align: justify;
+  }
+
+  .row span {
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 2px 6px;
+    border-radius: 8px;
+    font-size: 10px;
+    margin: 2px;
+  }
+
+  .row:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  /* Left column */
+  .left-column {
+    width: 480px;
+    flex-shrink: 0;
+    font-size: 9px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+  }
+
+  .left-column h2 {
+    font-size: 14px;
+    margin-bottom: -8px;
+  }
+
+  .left-column .role {
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .left-column .project {
+    font-size: 10px;
+    color: #333;
+    margin-bottom: 0px;
+    margin-top: -0px;
+
+  }
+
+  .left-column ul {
+    list-style: disc inside;
+    margin: 2px 0 0 0;
+    padding-left: 0;
+  }
+
+  .left-column li {
+    margin: 2px 0;
+  }
+
+  /* Right column */
+  .right-column {
+    flex: 1;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+
+    gap: 10px;
+  }
+
+  .right-column video,
+  .right-column img {
+    width: 80%;
+    border-radius: 6px;
+  }
+
+  /* Text-only right column */
+  .text-right .right-column {
+    max-width: 100%;
+  }
+
+  .text-right .right-column p,
+  .text-right .right-column li {
+    font-size: 11px;
+    margin-bottom: 5px;
+  }
+
+  /* Skills tags */
+  .skills span {
+    display: inline-block;
+    background: #1a7fcc;
+    color: #fff;
+    padding: 2px 6px;
+    margin: 2px;
+    border-radius: 8px;
+    font-size: 9px;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column;
+      align-items: center;
+    }
+    .left-column {
+      width: 100%;
+      text-align: center;
+      align-items: center;
+    }
+    .right-column {
+      max-width: 60%;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="header">
+    <img src="media/photo_prof3.jpg" style="transform: rotate(4deg);" alt="Your Photo">
+    <h1>Harris Komninos</h1>
+    <p class="role">Machine Learning Engineer | </br>
+      Computer Vision & Generative AI</p>
+
+      <p class="contact-icons">
+      <a href="mailto:harris.komninos@gmail.com">
+          <img src="icons/icons8-gmail-logo.svg" alt="Email">
+      </a>
+
+      <a href="https://github.com/HarrisKomn" target="_blank">
+          <img src="icons/icons8-github-logo.svg" alt="GitHub">
+      </a>
+
+      <a href="http://www.linkedin.com/in/harris-komninos" target="_blank">
+          <img src="icons/icons8-linked-in.svg" alt="LinkedIn">
+      </a>
+
+      <a href="https://scholar.google.com/citations?user=k5ZEnnAAAAAJ&hl=en&oi=ao" target="_blank">
+          <img src="icons/icons8-google-scholar.svg" alt="Google Scholar">
+      </a>
+      </p>
+  </div>
+
+  <div class="cv-container">
+    <hr> 
+
+    <div class="section-title">Skills</div>
+
+    <div class="skills-block">
+      <p class="skill-group"><strong>General Domains</strong></p>
+      <p>
+        <span>AI</span><span>Machine Learning</span><span>Deep Learning</span>
+        <span>Computer Vision</span><span>Medical Imaging</span>
+        <span>Robotics</span><span>LLMs</span>
+
+      </p>
+      <p class="skill-group"><strong>Applications</strong></p>
+      <p><span>Semantic Segmentation</span><span>Super-resolution</span><span>Object Detection and Tracking</span><span>Robot Control</span><span>Robot Localization</span>
+      </p> 
+      <p class="skill-group"><strong>Architectures & Methods</strong></p>
+      <p><span>Transformers</span><span>CNNs</span><span>RNNs</span><span>GANs</span><span>Diffusion Models</span><span>Contrastive Learning</span><span>Knowledge Distillation</span><span>RAG</span>
+      </p> 
+      <p class="skill-group"><strong>Programming</strong></p>
+      <p>
+        <span>Python</span><span>C++</span><span>MATLAB</span>
+        <span>SQL</span><span>Git</span><span>Docker</span><span>Linux</span>
+      </p>
+
+      <p class="skill-group"><strong>Frameworks & Tools</strong></p>
+      <p>
+        <span>PyTorch</span><span>TensorFlow</span><span>JAX</span>
+        <span>Numpy</span><span>Scikit-learn</span>
+        <span>Pandas</span><span>OpenCV</span>
+        <span>TensorRT</span><span>ONNX</span><span>LangChain</span>
+        <span>ChromaDB</span><span>Ollama</span><span>ROS 2</span><span>MONAI</span><span>Slicer3D</span>
+        <span>Weights & Biases</span><span>AWS</span>
+        <span>Hugging Face</span>
+      </p>
+    </div>
+    <hr> 
+
+    <!-- Professional Experience -->
+    <div class="section-title">Professional Experience</div>
+
+    <!-- Position 1 -->
+    <div class="row">
+      <div class="left-column">
+        <h2>Research Associate (Postdoc)</h2>
+        <p class="role">King’s College London (KCL), School of Biomedical Engineering </br> (Apr 2024 – Aug2025)</p>
+        <p class="project"><strong>Vision-based semi-automated therapy delivery in eye surgery (NIHR funded):</strong></p>
+        
+              <ul>  <strong>Project 1:</strong> Segmentation of surgical tools in microscope images from real vitreoretinal surgeries:
+                  <li>Developed deep learning multiclass segmentation models using feature distillation from SAM2.</li>
+                  <li>Improved mIoU by 12.68%, achieving near real-time inference (18 FPS). </li>
+                  <li>Deployed models at Moorfields Eye Hospital (London) on Nvidia Clara AGX device. </li>
+              </ul>
+              <br>
+              <ul> <strong>Project 2:</strong> Segmentation of surgical tools in microscope images of MOCK surgeries for robotic control:
+                  <li>Developed deep learning multiclass segmentation models for tool tracking.</li>  
+                  <li>Implemented deep learning point tracking algorithms for tracking injection points in microscope images.</li>
+                  <li>Integrated tracking outputs with robotic eye surgery system to enable real-time visual servoing.</li>
+                  <li>Optimized model inference speed using JAX and NVIDIA TensorRT.</li>
+                  <li>Prepared and presented technical progress reports to funding committee.</li>
+              </ul>
+
+              <a href="wp1.html">→ more details </a>
+      </div>
+      <div class="right-column">
+      <!-- <img src="company-a-screenshot.jpg" alt="Company A work example"> -->
+        <figure style="float: left; margin: 10px 0px 0px 0; text-align: center;">
+          <img src="media/mult_seg_tr_mtib0.gif" style="height:110px; width:250px;" alt="Tool segmentation demo">
+          <figcaption style="font-size: 9px; color: #555;">Tool segmentation + tracking (left). Point tracking(right).</figcaption>
+        </figure>          
+        <figure style="float: left; margin: 0px 0px 0px 0; text-align: center;">
+          <img src="media/bin_tool_seg.gif" style="height:110px; width:250px;" alt="Tool segmentation demo">
+          <figcaption style="font-size: 9px; color: #555;">Tool segmentation + tracking.</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- Position 2 -->
+    <div class="row">
+      <div class="left-column">
+        <h2>Research Assistant</h2>
+        <p class="role">Sensor Coating Systems & Queen Mary University of London  </br> (Jun 2023 – Nov 2024)</p>
+        <p class="project"><strong>Deep learning visual SLAM for robot localization in aerospace environment (NATEP funded):</strong></p>
+          <ul>
+              <li>Developed an end-to-end deep learning Visual SLAM pipeline for monocular camera-based robot localization.</li>
+              <li>Aligned the reconstructed 3D point cloud with the CAD model to resolve scale ambiguity in monocular setting.</li>
+              <li>Validated system's localization against an electromagnetic tracking sensor and CAD points of interest.</li>
+              <li>Achieved 2 mm localization accuracy in a mock environment, under challenging lighting and texture conditions.</li>
+              <li>Prepared and presented technical progress reports to funding committee.</li>
+
+          </ul>
+          
+            <a href="wp2.html">→ more details</a>
+      </div>
+      <div class="right-column">
+          <figure style="float: left; margin: 30px 0px 0px 0; text-align: center;">
+          <img src="media/rob_local (1).gif" style="height:130px; width:250px;" alt="Tool segmentation demo">
+          <figcaption style="font-size: 9px; color: #555;">Robot trajectory(red), reconstructed blade(point cloud).</figcaption>
+        </figure>
+      </div>
+    </div>
+
+      <!-- Position 3 -->
+    <div class="row">
+      <div class="left-column">
+        <h2>Research Intern</h2>
+        <p class="role"> University College London (UCL), WEISS & Computer Science Dept. </br> (Apr 2019 - Jun 2019)</br></p>
+          
+        <p class="project"><strong>Ultrasound 3D Reconstruction of Tumor Masses in Robotic-Assisted Nephrectomy:</strong> </p>
+        <ul>      
+          <li>Estimated the pose of the US probe based on: robot kinematics and ARUCO markers embedded on the probe. </li>
+          <li>Implemented algorithm for automatic US tumor segmentation, improving 3D volume quality.</li>
+          <li>Reconstructed the 3D model of the scanned kidney phantom using PLUS and Slicer3D libraries. </li>
+          <li>Integrated the tracking, segmentation and reconstruction algorithms in a single C++ application. </li>
+        </ul>
+      </div>
+      <div class="right-column">
+        <figure style="float: left; margin: 20px 0px 0px 0; text-align: center;">
+          <img src="media/3D_us_rec.png" style="height:130px; width:250px;" alt="Tool segmentation demo">
+          <figcaption style="font-size: 9px; color: #555;">3D Ultrasound reconstruction.</figcaption>
+        </figure> 
+      </div>
+    </div>
+  <hr>
+    <!-- Education Section -->
+    <div class="section-title">Education</div>
+
+      <div class="row">
+      <div class="left-column">
+        <h2>PhD in Biomedical Engineering</h2>
+        <p class="role"> King’s College London (KCL), School of Biomedical Engineering </br> (Oct 2020 – Mar 2024) </br></p>
+        <p class="project"><strong> Deep learning super-resolution in Optical Coherence Tomography (OCT):</strong></p> 
+      <ul> 
+          <li>Curated a dataset of 10,000+ OCT images collected from 66 patients at Moorfields Eye Hospital (London).</li>
+          <li>Developed deep learning models (CNNs, RNNs and Transformers) for OCT quality enhancement.</li>
+          <li>Implemented contrastive learning and cycle-consistency losses for training with unpaired OCT datasets.</li>
+          <li>Improved image quality by 53% (FID), enabling enhanced OCT visualization for improved clinical interpretation. </li>  
+          <li>Qualitative evaluation by expert clinicians confirmed the improvement in OCT quality. </li>  
+
+          <li>Developed semantic segmentation deep learning models for retinal layer using domain adaptation techniques.</li>
+          <li>Implemented image registration pipeline between 2D intra-operative and 3D pre-operative OCT images.</li>
+          </ul>
+          <p class="project" style="margin-top: 10px;"><strong>Additional Activities:</strong></p>
+          <ul>	
+              <li>Organizer/Presenter of Surgical Interventional Engineering (SIE) scientific seminars.</li>
+              <li>Supervisor in SIE summer school projects.</li>
+              <li>Supervisor in MSc Healthcare Technologies students group project.</li>
+              <li>Teaching Assistant in Object Oriented Programming (C++) course for Bachelor students.</li>                                                           </li>
+          </ul>
+      </div>
+      <div class="right-column">
+          <figure style="float: left; margin: 70px 0px 0px 0; text-align: center;">
+          <img src="media/SR_iOCT.gif" style="height:130px; width:250px;" alt="Tool segmentation demo">
+          <figcaption style="font-size: 9px; color: #555;">Low quality OCT (left), high quality OCT (right).</figcaption>
+        </figure>
+      </div>
+    </div>
+
+      <div class="row">
+      <div class="left-column">
+        <h2>BSc+MSc in Electrical and Computer Engineering </h2>
+        <p class="role"> University of Patras </br> (Oct 2013 – Feb 2019)</p>
+      <ul>
+          <li>Coursework: Artificial Intelligence, Introduction to Robotics, Pattern Recognition, Probability and Statistics. 
+          <li>Implemented blendshape interpolation for facial animation in 3D Computational Geometry.</li>
+          <li>Developed a solar system simulation including real planet orbits and asteroid collisions in Computer Graphics.</li> 
+          <li>Developed an interactive medical simulation with haptic feedback and FEM organ deformations in SOFA.</li> 
+
+        </ul>
+
+      </div>
+      <div class="right-column">
+        <figure style="float: left; margin: 20px 0px 0px 0; text-align: center;">
+          <img src="media/N_Simulation.gif" style="height:130px; width:250px;" alt="Tool segmentation demo">
+          <figcaption style="font-size: 9px; color: #555;">Planets' orbit simulation.</figcaption>
+        </figure>
+      </div>
+    </div>
+
+  <hr>
+
+    <!-- Projects Section -->
+    <div class="section-title">Projects (selected)</div>
+
+    <div class="row">
+      <div class="left-column">
+        <h2>Unsupervised Fashion Image Categorization <br><br></h2>
+        
+        <!-- <p class="role">Role: Fullstack Developer</p> -->
+        <ul>
+          <li>Built an unsupervised clustering system using DINO/CLIP embeddings. </li>
+          <li>Reduced embedding dimensions with PCA and image embeddings using KMeans.</li>
+          <li>Assigned semantic labels by comparing cluster embeddings with predefined category embeddings via CLIP.</li>
+          <li>Classified new fashion images by embedding them and assigning to the nearest cluster. </li>
+          <li>Developed an interactive Streamlit application for real-time image classification.</li>
+        </ul>
+      </div>
+      <div class="right-column">
+        <figure style="float: left; margin: 0px 0px 0px 0; text-align: center;">
+          <img src="media/fashion_clustering.gif" style="height:150px; width:250px;" alt="Tool segmentation demo">
+          <figcaption style="font-size: 9px; color: #555;">Interactive fashion image categorization.</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="left-column">
+        <h2>PDF Question Answering (RAG) <br><br></h2>
+        <!-- <p class="role">Role: Frontend Developer</p> -->
+        <ul>
+          <li>Designed a retrieval-augmented generation (RAG) pipeline using LangChain and ChromaDB.</li>
+          <li>Integrated open-source LLMs (LLaMA, Mistral) for text generation.</li>
+          <li>Ingested documents and performed vector-based indexing for efficient retrieval.</li>
+          <li>Enabled interactive querying over the dataset using the RAG system.</li>
+    
+      </ul>
+      </div>
+      <div class="right-column">
+        <!-- <video controls muted>
+          <source src="project-alpha.mp4" type="video/mp4">
+        </video>
+        <img src="project-alpha.jpg" alt="Project Alpha screenshot"> -->
+      </div>
+    </div>
+  </div>
+</body>
+</html>
